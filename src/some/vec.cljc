@@ -48,8 +48,8 @@
     (map clojure.core/- a b)
     (- a (repeat (count a) b))))
 
-(defn *
-  "Component-wise multiplication of two n-dimensional vectors.
+(defn
+  * "Component-wise multiplication of two n-dimensional vectors.
   If the second argument is a scalar, all components of the first
   argument gets multiplied by it.
 
@@ -142,7 +142,7 @@
   "Returns the length of a vector of any dimension."
   [v] (->> (map clojure.core/* v v) (reduce clojure.core/+) (Math/sqrt)))
 
-(defn lerpn [a b t] (+ (* (- 1 t) a) (* t b)))
+(defn lerpn [a b t] (+ (* (clojure.core/- 1 t) a) (clojure.core/* t b)))
 
 (defn lerp
   "Lerps between two vectors"
