@@ -142,7 +142,7 @@
   "Returns the length of a vector of any dimension."
   [v] (->> (map clojure.core/* v v) (reduce clojure.core/+) (Math/sqrt)))
 
-(defn lerpn [a b t] (+ (* (clojure.core/- 1 t) a) (clojure.core/* t b)))
+(defn lerpn [a b t] (clojure.core/+ (clojure.core/* (clojure.core/- 1 t) a) (clojure.core/* t b)))
 
 (defn lerp
   "Lerps between two vectors"

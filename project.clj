@@ -1,4 +1,4 @@
-(defproject org.clojars.some/vec "0.0.2"
+(defproject org.clojars.some/vec "0.0.3"
 
   :description "A collection of helper functions that work on vectors,
   both in the sense of a collection and in the directional sense."
